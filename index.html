@@ -1,100 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <title>Joeys Pool Solutions</title>
-    <link rel="stylesheet"
-          href="styles.css">
-    <link rel="stylesheet"
-          href="https://use.typekit.net/hof4dvs.css">
 
-</head>
+<div id="password-prompt">
+    <label for="password">Enter Password:</label>
+    <input type="password"
+           id="password">
+    <button onclick="checkPassword()">Enter</button>
+</div>
+<div id="protected-content"
+     style="display: none;">
+    <!-- Your protected content goes here -->
 
-<body>
-    <!-- Navbar -->
-    <nav>
-        <ul class="sidebar">
-            <li onclick="hideSidebar()">
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                         height="26px"
-                         viewBox="0 -960 960 960"
-                         width="26px"
-                         fill="#5f6368">
-                        <path
-                              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg>
-                </a>
-            </li>
-            <li><a href="#">Tile</a></li>
-            <li><a href="#">Plaster</a></li>
-            <li><a href="#">Construction</a></li>
-            <li><a href="#">Equipment</a></li>
-            <li><a href="#">Leaks</a></li>
-        </ul>
-        <ul>
-            <li class="navald">
-                <a href="index.html"><img src="images/noun-swimming-88697.svg"
-                         alt="Joeys Pool Solutions Logo">JOEYS POOL SOLUTIONS</a>
-            </li>
-            <li class="hideOnMobile"><a href="#">Tile</a></li>
-            <li class="hideOnMobile"><a href="#">Plaster</a></li>
-            <li class="hideOnMobile"><a href="#">Construction</a></li>
-            <li class="hideOnMobile"><a href="#">Equipment</a></li>
-            <li class="hideOnMobile"><a href="#">Leaks</a></li>
-            <li class="menu-button"
-                onclick="showSidebar()">
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                         height="26px"
-                         viewBox="0 -960 960 960"
-                         width="26px"
-                         fill="#5f6368">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                    </svg>
-                </a>
-            </li>
-        </ul>
-    </nav>
 
-    <!-- Header -->
-    <div class="header">
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Joeys Pool Solutions</title>
+        <link rel="stylesheet"
+              href="styles.css">
+        <link rel="stylesheet"
+              href="https://use.typekit.net/hof4dvs.css">
 
-    <!-- Triangle -->
-    <div class="lookdown">
-        <svg xmlns="http://www.w3.org/2000/svg"
-             height="120px"
-             viewBox="0 -960 960 960"
-             width="120px"
-             fill="#2db9cbe6">
-            <path d="M480-360 280-560h400L480-360Z" />
-        </svg></a>
-    </div>
+    </head>
 
-    <!-- Blog -->
-    <div class="blog">
-        <h1>Welcome to Joeys Pool Solutions</h1>
-        <p>A Knowledge Database for Swimming Pools</p>
-    </div>
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                             height="26px"
+                             viewBox="0 -960 960 960"
+                             width="26px"
+                             fill="#5f6368">
+                            <path
+                                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="#">Tile</a></li>
+                <li><a href="#">Plaster</a></li>
+                <li><a href="#">Construction</a></li>
+                <li><a href="#">Equipment</a></li>
+                <li><a href="#">Leaks</a></li>
+            </ul>
+            <ul>
+                <li class="navald">
+                    <a href="index.html"><img src="images/noun-swimming-88697.svg"
+                             alt="Joeys Pool Solutions Logo">JOEYS POOL SOLUTIONS</a>
+                </li>
+                <li class="hideOnMobile"><a href="#">Tile</a></li>
+                <li class="hideOnMobile"><a href="#">Plaster</a></li>
+                <li class="hideOnMobile"><a href="#">Construction</a></li>
+                <li class="hideOnMobile"><a href="#">Equipment</a></li>
+                <li class="hideOnMobile"><a href="#">Leaks</a></li>
+                <li class="menu-button"
+                    onclick="showSidebar()">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                             height="26px"
+                             viewBox="0 -960 960 960"
+                             width="26px"
+                             fill="#5f6368">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-    <!-- indeximgs -->
-    <div class="indeximgs">
+        <!-- Header -->
+        <div class="header">
+        </div>
 
-    </div>
+        <!-- Triangle -->
+        <div class="lookdown">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 height="120px"
+                 viewBox="0 -960 960 960"
+                 width="120px"
+                 fill="#2db9cbe6">
+                <path d="M480-360 280-560h400L480-360Z" />
+            </svg></a>
+        </div>
 
-    <script>
-        function showSidebar() {
-            const sidebar = document.querySelector(".sidebar");
-            sidebar.style.display = "flex";
+        <!-- Blog -->
+        <div class="blog">
+            <h1>Welcome to Joeys Pool Solutions</h1>
+            <p>A Knowledge Database for Swimming Pools</p>
+        </div>
+
+        <!-- indeximgs -->
+        <div class="indeximgs">
+
+        </div>
+</div>
+
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+    }
+
+    function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+    }
+    function checkPassword() {
+        const correctPassword = "Joey123"; // **WARNING: Accessible in source code**
+        const enteredPassword = document.getElementById("password").value;
+
+        if (enteredPassword === correctPassword) {
+            document.getElementById("password-prompt").style.display = "none";
+            document.getElementById("protected-content").style.display = "block";
+        } else {
+            alert("Incorrect Password!");
         }
-
-        function hideSidebar() {
-            const sidebar = document.querySelector(".sidebar");
-            sidebar.style.display = "none";
-        }
-    </script>
+    }
+</script>
 </body>
 
 </html>
